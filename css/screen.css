@@ -105,6 +105,9 @@ a { text-decoration: none; }
 .nav__list li li a { padding: 0 22px 0 44px; }
 .nav__list a { display: block; position: relative; border-bottom: 1px solid #242424; border-left: 2px solid transparent; padding: 9px 32px 9px 22px; color: #cacaca; font-size: 14px; font-family: "opensans-semibold", Arial, sans-serif; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
 
+.ie8 .nav { left: -240px; }
+.ie8 .nav.is-active { left: 0; }
+
 .breadcrumbs { margin: 0 0 20px; background: #e9e9e9; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.19); }
 .breadcrumbs .l-center:before { content: ""; position: absolute; left: -1970px; top: 0; bottom: 0; width: 2000px; background: #f4f4f4; }
 .breadcrumbs a, .breadcrumbs span { position: relative; display: inline-block; padding: 6px 10px 6px 12px; vertical-align: middle; line-height: 1; font-size: 12px; }
@@ -136,3 +139,12 @@ a { text-decoration: none; }
 
 .date { display: inline-block; position: relative; padding: 3px 0 0; color: #a02d31; font-size: 14px; }
 .date:before { content: ""; position: absolute; top: 0; left: 0; height: 2px; width: 31px; background: #d7d7d7; }
+
+.page-error { position: absolute; top: 0; left: 0; bottom: 0; right: 0; text-align: center; font-size: 0; }
+.page-error:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.page-error__in { position: relative; display: inline-block; vertical-align: middle; padding: 17px 28px; width: 417px; height: 214px; background: white; text-align: left; line-height: 1.1; white-space: nowrap; }
+.page-error__in:before { content: ""; position: absolute; left: 0; top: 0; z-index: -1; width: 645px; height: 330px; background: url(../img/shadow.png) 0 0 no-repeat; }
+.page-error__number { display: inline-block; vertical-align: middle; font-size: 106px; font-family: "opensans-bold", Arial, sans-serif; }
+.page-error__text { display: inline-block; vertical-align: middle; margin-left: 10px; width: 175px; color: #8a8a8a; font-size: 18px; white-space: normal; }
+.page-error__link { border-top: 2px solid #a02d31; padding: 16px 0 0; font-size: 16px; }
+.page-error__link a { color: #a02d31; }

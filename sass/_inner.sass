@@ -42,3 +42,51 @@
         height: 2px
         width: 31px
         background: #d7d7d7  
+
+.page-error
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    +vertical
+    &__in
+        position: relative
+        display: inline-block
+        vertical-align: middle
+        padding: 17px 28px 
+        width: 417px
+        height: 214px
+        background: #fff
+        text-align: left
+        line-height: 1.1
+        white-space: nowrap
+        &:before
+            content: ""
+            position: absolute
+            left: 0
+            top: 0
+            z-index: -1
+            width: 645px
+            height: 330px
+            background: url(../img/shadow.png) 0 0 no-repeat 
+             
+    &__number
+        display: inline-block
+        vertical-align: middle
+        font-size: 106px
+        +fb
+    &__text
+        display: inline-block
+        vertical-align: middle
+        margin-left: 10px
+        width: 175px
+        color: #8a8a8a
+        font-size: 18px 
+        white-space: normal
+    &__link
+        border-top: 2px solid $red
+        padding: 16px 0 0 
+        font-size: 16px
+        a
+            color: $red 
