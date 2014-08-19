@@ -4,5 +4,13 @@ head.ready(function() {
 	// 	$(".js-popup").hide();
 	// });
 
-	console.log($('body').html());
+	$(".js-show-nav").on("click", function(){
+		$(".js-nav").toggleClass("is-active");
+		$(this).toggleClass("is-active");
+		return false;
+	});
+	$(".js-hide-nav").on("click", function(){
+		$(".js-nav").removeClass("is-active");
+		return false;
+	});
 });
