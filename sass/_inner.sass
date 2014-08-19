@@ -1,0 +1,44 @@
+.page-title
+    margin: 0 0 17px 
+    +fsb
+    font-size: 30px
+    font-weight: normal
+.posts-wrap
+    margin: 0 auto 
+    max-width: 1260px
+.post
+    float: left
+    margin-bottom: 20px
+    border: 1px solid $border
+    padding: 18px 18px 40px
+    width: 300px
+    background: #fff
+    font-size: 16px
+    color: $black  
+    +tr
+    +fr
+    &:hover
+        box-shadow: 0 2px 12px rgba(0,0,0,.14)
+        //+fsb
+    &__img
+        margin: 0 0 23px 
+        max-height: 174px
+        overflow: hidden
+        img
+            max-width: 100%
+    .date
+        margin-bottom: 10px
+.date
+    display: inline-block
+    position: relative
+    padding: 3px 0 0 
+    color: $red
+    font-size: 14px
+    &:before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        height: 2px
+        width: 31px
+        background: #d7d7d7  
