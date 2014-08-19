@@ -117,8 +117,8 @@
 =font($alias, $name)
 	@font-face
 		font-family: $alias
-		src: url("fonts/" + $name + ".eot")
-		src: url("fonts/" + $name + ".eot?#iefix") format("embedded-opentype"), url("fonts/" + $name + ".woff") format("woff"), url("fonts/" + $name + ".ttf") format("truetype")
+		src: url("../fonts/" + $name + ".eot")
+		src: url("../fonts/" + $name + ".eot?#iefix") format("embedded-opentype"), url("../fonts/" + $name + ".woff") format("woff"), url("../fonts/" + $name + ".ttf") format("truetype")
 		font-weight: normal
 		font-style: normal
 
@@ -142,7 +142,7 @@
 	-ms-transition: $what
 	transition: $what
 
-=tr($what)
+=tr($what:all .2s linear)
 	+transition($what)
 
 =hide-text
