@@ -309,19 +309,19 @@
 		span
 			display: block
 			border-bottom: 1px dotted #7a7a7a  
-	.is-active
-		background: $red 
-		position: relative
-		color: #fff
-		border-radius: 15px  
-		span
-			border-color: transparent 
-		&:after
-			content: ""
-			position: absolute
-			top: 5px
-			right: 5px
-			+s(del) 
+		&.is-active
+			background: $red 
+			position: relative
+			color: #fff
+			border-radius: 15px  
+			span
+				border-color: transparent 
+			&:after
+				content: ""
+				position: absolute
+				top: 5px
+				right: 5px
+				+s(del) 
 	&__other
 		float: right
 		.select
@@ -337,7 +337,7 @@
 .item
 	display: inline-block
 	position: relative
-	padding: 17px 17px 35px
+	padding: 17px 17px 23px
 	width: 220px
 	font-size: 12px
 	background: #fff
@@ -345,9 +345,51 @@
 	color: $dark 
 	text-align: left
 	+tr(box-shadow .2s)
-
+	.date
+		margin-top: 12px
+		color: #5f5f5f
+		font-size: 12px 
+	&__meta
+		position: absolute
+		left: 17px
+		bottom: 14px
+		color: #5f5f5f
+		font-size: 12px  
+	&__img
+		margin-bottom: 19px
+		max-height: 202px
+		overflow: hidden
+		text-align: center
+		img
+			max-width: 100%
+	&__title
+		font-size: 14px
+		+fsb
+	&__text
+		color: #5f5f5f
+		font-size: 12px
+	&__overlay
+		position: absolute
+		top: 0
+		z-index: 1
+		right: 0
+		bottom: 0
+		left: 0
+		background: #fff  
+		opacity: 0
+		visibility: hidden
+		+tr(opacity .2s linear)
+		&:after
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			margin: -34px 0 0 -34px 
+			z-index: 2
+			+s(add)
 	&_service
 		margin: 0 20px 20px 0
+		padding-bottom: 35px
 		height: 235px
 		vertical-align: top
 		position: relative
@@ -381,11 +423,98 @@
 			img
 				display: block
 				margin: 0 auto 
-	&__text
-		font-size: 14px
-	&__meta
+		.item__text
+			font-size: 14px
+	&_project
+		margin-bottom: 20px
+		&:hover
+			box-shadow: 0 0 24px rgba(0,0,0,.15)
+			.item__overlay
+				opacity: 1
+				visibility: visible
+	&_has-corner
+		border-radius: 0 13px 0 0
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			right: 0
+			+arr(13,13,#e1e1e1,bl) 
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			right: 0
+			+arr(13,13,#f5f5f5,tr) 
+
+.map
+	position: relative
+	margin: 0 0 32px 
+	height: 380px
+	&__body
 		position: absolute
-		left: 17px
-		bottom: 14px
-		color: #5f5f5f
-		font-size: 12px  
+		top: 0
+		bottom: 0
+		left: -40px
+		right: -40px
+
+.feedback
+	+clr
+	&__title
+		font-size: 18px
+		+fsb
+	&__info
+		float: left
+		margin-right: 25px
+		width: 295px
+	&__text
+		overflow: hidden
+		padding-bottom: 1px
+	&__btn
+		text-align: right
+	.input_textarea
+		min-height: 256px
+
+.captcha
+	+clr
+	&__item
+		position: relative
+		float: left
+		margin-right: 12px
+		width: 31px
+		height: 31px
+		border-radius: 50% 
+		text-align: center
+		line-height: 31px
+		cursor: pointer
+		&.is-red
+			background: #bc4747 
+		&.is-green
+			background: #47bc94 
+		&.is-yellow
+			background: #ddc868
+		&.is-blue
+			background: #5087be 
+		span
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			border-radius: 50% 
+			border: 3px solid $black
+			display: none
+			box-shadow: inset 0 0 16px rgba(0,0,0,.84)
+			&:after
+				content: ""
+				position: absolute
+				left: 7px
+				top: 9px
+				+s(captcha-check) 
+		input
+			vertical-align: middle
+			cursor: pointer
+			opacity: 0
+			&:checked
+				+ span
+					display: block
