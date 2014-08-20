@@ -92,6 +92,7 @@ a
 	overflow: hidden 
 .out
 	position: relative
+	z-index: 2
 	margin: 0 0 -50px
 	min-height: 100%
 	height: auto !important
@@ -111,7 +112,7 @@ a
 
 .header
 	position: relative
-	z-index: 2
+	z-index: 4
 	height: 76px
 	background: #fff 
 	box-shadow: 0 1px 2px rgba(0,0,0,.07)
@@ -127,7 +128,7 @@ a
 		color: #909090
 		font-size: 14px 
 		text-transform: uppercase
-		+tr
+		+tr(color .2s)
 		background: none
 		&:hover
 			color: $dark 
@@ -176,7 +177,7 @@ a
 				opacity: 1
 				z-index: 1
 		i
-			margin-top: 4px
+			margin: 4px 4px 0 0
 			vertical-align: top
 		&.has-droplist
 			&:after
@@ -262,13 +263,13 @@ a
 	position: fixed
 	top: 0
 	bottom: 0
-	+translateX(-240px)
+	left: -240px
 	width: 240px
 	z-index: 3
 	background: $black 
-	+tr
+	+tr(transform .2s linear)
 	&.is-active
-		+translateX(0)
+		+translateX(240px)
 	&__top
 		padding: 28px 22px 
 	&__close
@@ -352,6 +353,8 @@ a
 		&.is-active
 			left: 0	
 .breadcrumbs
+	position: relative
+	z-index: 4
 	margin: 0 0 20px 
 	background: #e9e9e9
 	box-shadow: 0 1px 1px rgba(0,0,0,.19)
@@ -397,6 +400,7 @@ a
 
 .footer
 	position: relative
+	z-index: 4
 	padding: 17px 0 
 	background: #fff 
 	color: $dark 
@@ -412,7 +416,7 @@ a
 			text-align: left
 	a
 		color: $dark
-		+tr
+		+tr(color .2s)
 		&:hover
 			color: $red 
 
