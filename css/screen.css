@@ -127,7 +127,37 @@ a { text-decoration: none; }
 .footer a { color: #303030; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
 .footer a:hover { color: #a02d31; }
 
+.btn { display: inline-block; padding: 8px 17px 6px; font-size: 12px; border-radius: 13px; text-transform: uppercase; font-family: "opensans-regular", Arial, sans-serif; line-height: 1; color: white; background: #a02d31; }
+
 .page-title { margin: 0 0 17px; font-family: "opensans-semibold", Arial, sans-serif; font-size: 30px; font-weight: normal; }
+
+.page-content { margin: 28px 0 0; padding: 40px; background: white; box-shadow: 0 0 24px rgba(0, 0, 0, 0.15); }
+.page-content .page-title { margin-bottom: 11px; }
+
+.article { font-size: 16px; font-family: "opensans-regular", Arial, sans-serif; line-height: 1.5; *zoom: 1; }
+.article:after { content: " "; display: table; clear: both; }
+.article .date { margin-bottom: 27px; }
+.article h1, .article h2, .article h3, .article h4, .article h5, .article h6 { font-family: "opensans-semibold", Arial, sans-serif; font-weight: normal; }
+.article h1 { margin: 0 0 11px; font-size: 30px; }
+.article h2 { margin: 14px 0 4px; font-size: 24px; }
+.article h3 { margin: 14px 0 4px; font-size: 22px; }
+.article h4 { margin: 14px 0 4px; font-size: 20px; }
+.article h5 { margin: 14px 0 4px; font-size: 18px; }
+.article h6 { margin: 14px 0 4px; font-size: 16px; }
+.article p { margin-bottom: 14px; }
+.article img { float: left; margin: 0 40px 10px 0; }
+.article img + p { margin-bottom: 35px; }
+.article em, .article i { font-style: normal; font-family: "opensans-italic", Arial, sans-serif; line-height: 1.55; color: #454545; font-size: 18px; }
+.article b, .article strong { font-weight: normal; font-family: "opensans-bold", Arial, sans-serif; }
+.article a { color: #a02d31; }
+.article a:hover { text-decoration: underline; }
+.article ul { margin: 14px 0; }
+.article ul li { position: relative; padding-left: 20px; }
+.article ul li:before { content: ""; position: absolute; left: 0; top: 10px; width: 4px; height: 4px; background: #191919; border-radius: 50%; }
+.article ol { margin: 14px 0; counter-reset: list1; }
+.article ol li { position: relative; padding-left: 20px; }
+.article ol li:before { content: ""; position: absolute; left: 0; top: 0; font-size: 16px; counter-increment: list1; content: counter(list1) ". "; }
+.article hr { margin: 30px 0; border: 0; height: 1px; background: gainsboro; }
 
 .posts-wrap { margin: 0 auto; max-width: 1260px; }
 
@@ -137,7 +167,7 @@ a { text-decoration: none; }
 .post__img img { max-width: 100%; }
 .post .date { margin-bottom: 10px; }
 
-.date { display: inline-block; position: relative; padding: 3px 0 0; color: #a02d31; font-size: 14px; }
+.date { display: block; position: relative; padding: 3px 0 0; color: #a02d31; font-size: 14px; }
 .date:before { content: ""; position: absolute; top: 0; left: 0; height: 2px; width: 31px; background: #d7d7d7; }
 
 .page-error { position: absolute; top: 0; left: 0; bottom: 0; right: 0; text-align: center; font-size: 0; }

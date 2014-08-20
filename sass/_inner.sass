@@ -3,6 +3,95 @@
     +fsb
     font-size: 30px
     font-weight: normal
+.page-content
+    margin: 28px 0 0 
+    padding: 40px 
+    background: #fff
+    box-shadow: 0 0 24px rgba(0,0,0,.15)
+    .page-title
+        margin-bottom: 11px
+.article
+    font-size: 16px
+    +fr
+    line-height: 1.5
+    +clr
+    .date
+        margin-bottom: 27px
+    h1,h2,h3,h4,h5,h6
+        +fsb
+        font-weight: normal
+    h1
+        margin: 0 0 11px 
+        font-size: 30px
+    h2
+        margin: 14px 0 4px 
+        font-size: 24px
+    h3
+        margin: 14px 0 4px 
+        font-size: 22px
+    h4
+        margin: 14px 0 4px 
+        font-size: 20px
+    h5
+        margin: 14px 0 4px 
+        font-size: 18px 
+    h6
+        margin: 14px 0 4px 
+        font-size: 16px
+    p
+        margin-bottom: 14px
+    img
+        float: left
+        margin: 0 40px 10px 0 
+        + p
+            margin-bottom: 35px
+    em, i
+        font-style: normal
+        +fit
+        line-height: 1.55
+        color: #454545
+        font-size: 18px
+    b, strong
+        font-weight: normal
+        +fb
+    a
+        color: $red 
+        &:hover
+            text-decoration: underline
+    ul
+        margin: 14px 0
+        li
+            position: relative
+            padding-left: 20px
+            &:before
+                content: ""
+                position: absolute
+                left: 0
+                top: 10px
+                width: 4px
+                height: 4px
+                background: $black
+                border-radius: 50%  
+    ol
+        margin: 14px 0
+        counter-reset: list1
+        li
+            position: relative
+            padding-left: 20px
+            &:before
+                content: ""
+                position: absolute
+                left: 0
+                top: 0
+                font-size: 16px
+                //color: $orange  
+                counter-increment: list1  
+                content: counter(list1) ". "
+    hr
+        margin: 30px 0
+        border: 0
+        height: 1px
+        background: #dcdcdc 
 .posts-wrap
     margin: 0 auto 
     max-width: 1260px
@@ -29,7 +118,7 @@
     .date
         margin-bottom: 10px
 .date
-    display: inline-block
+    display: block
     position: relative
     padding: 3px 0 0 
     color: $red
