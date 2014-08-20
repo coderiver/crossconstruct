@@ -110,6 +110,9 @@
 		text-align: left
 		&:first-child
 			margin-left: 0
+		+r(1350)
+			&:last-child
+				display: none
 .post
 	margin-bottom: 20px
 	display: inline-block
@@ -194,3 +197,187 @@
 		font-size: 16px
 		a
 			color: $red 
+			
+.search
+	+clr
+	.btn
+		float: right
+	&__input
+		position: absolute
+		top: 12px
+		right: 124px
+		bottom: 12px
+		left: 14px
+		input
+			display: block
+			padding: 0 18px 
+			width: 100%
+			height: 31px
+			border: 1px solid #dadada
+			border-radius: 16px
+			background: #f9f9f9
+			font-size: 16px
+			+fr
+			+tr(background .2s)
+			box-shadow: inset 0 3px 2px rgba(0,0,0,.03)
+			+placeholder
+				color: #aaa 
+			&:focus
+				background: #fdfdfd
+.search-info
+	margin: 0 0 37px 
+	font-size: 16px
+	strong
+		font-weight: normal
+		+fsb
+.result
+	position: relative
+	margin: 0 0 15px 
+	padding: 17px 62px 20px
+	min-height: 134px
+	background: #fff
+	color: #636363 
+	box-shadow: 0 1px 1px rgba(0,0,0,.13)
+	&:last-child
+		margin-bottom: 35px
+	&__title
+		color: $red
+		&:hover 
+			text-decoration: underline
+		strong
+			+fsb
+			font-weight: normal
+	&__counter
+		position: absolute
+		left: 20px
+		top: 17px
+		font-size: 16px
+		color: #5f5f5f 
+	&__text
+		padding: 16px 0 0 
+		font-size: 14px
+		strong
+			padding: 0 2px 
+			background: #222 
+			color: #fff 
+			font-weight: normal
+.pager
+	margin: 35px 0 60px
+	.btn
+		margin-right: 23px
+	&__nav
+		display: inline-block
+		vertical-align: middle
+		a
+			display: inline-block
+			vertical-align: middle
+			margin-left: 7px
+			width: 28px
+			height: 28px
+			text-align: center
+			line-height: 28px
+			border-radius: 50% 
+			font-size: 16px
+			color: $red 
+			&:first-child
+				margin-left: 0
+			&.pager__prev
+				+s(pager-prev)
+			&.pager__next
+				+s(pager-next)
+		.is-active
+			background: #2f2f2f
+			color: #fff
+		
+.filter
+	margin: 0 0 44px 
+	&__link
+		display: inline-block
+		margin-left: 5px
+		padding: 3px 30px 3px 14px 
+		vertical-align: middle
+		font-size: 16px
+		color: $black 
+		&:first-child
+			margin-left: 0
+		&:hover
+			span
+				border-color: transparent 
+		span
+			display: block
+			border-bottom: 1px dotted #7a7a7a  
+	.is-active
+		background: $red 
+		position: relative
+		color: #fff
+		border-radius: 15px  
+		span
+			border-color: transparent 
+		&:after
+			content: ""
+			position: absolute
+			top: 5px
+			right: 5px
+			+s(del) 
+.items-wrap
+	margin: 0 auto 30px
+	text-align: left
+	font-size: 0
+	width: 1200px
+	+r(1260)
+		width: 100% 
+.item
+	display: inline-block
+	position: relative
+	padding: 17px 17px 35px
+	width: 220px
+	font-size: 12px
+	background: #fff
+	box-shadow: 0 1px 1px rgba(0,0,0,.13)
+	color: $dark 
+	text-align: left
+	+tr(box-shadow .2s)
+
+	&_service
+		margin: 0 20px 20px 0
+		height: 235px
+		vertical-align: top
+		position: relative
+		&:hover
+			box-shadow: 0 7px 9px rgba(0,0,0,.16)
+			.item__text
+				color: $red 
+			.item__img
+				div
+					opacity: 1
+					visibility: visible
+					&:first-child
+						opacity: 0
+						visibility: hidden
+		.item__img
+			position: relative
+			margin: 0 0 29px 
+			padding-top: 13px
+			height: 64px
+			div
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				opacity: 0
+				visibility: hidden
+				+tr(opacity .5s)
+				&:first-child
+					opacity: 1
+					visibility: visible
+			img
+				display: block
+				margin: 0 auto 
+	&__text
+		font-size: 14px
+	&__meta
+		position: absolute
+		left: 17px
+		bottom: 14px
+		color: #5f5f5f
+		font-size: 12px  

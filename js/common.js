@@ -13,4 +13,8 @@ head.ready(function() {
 		$(".js-nav").removeClass("is-active");
 		return false;
 	});
+	$(".js-filter a").on("click", function(){
+		$(this).toggleClass("is-active");
+		return false;
+	});
 });
