@@ -131,6 +131,8 @@ a { text-decoration: none; }
 .btn:hover { background: #8a272a; }
 .btn:active { top: 1px; }
 
+.constr { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url(../img/constr.jpg) no-repeat 50% 50%; box-sizing: cover; }
+
 .page-title { margin: 0 0 17px; font-family: "opensans-semibold", Arial, sans-serif; font-size: 30px; font-weight: normal; }
 
 .page-content { margin: 28px 0 0; padding: 40px; background: white; box-shadow: 0 0 24px rgba(0, 0, 0, 0.15); }
