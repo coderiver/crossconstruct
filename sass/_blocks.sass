@@ -9,11 +9,13 @@
 	line-height: 1
 	color: #fff  
 	background: $red 
-	+tr
+	+tr(background .2s)
 	&:hover
 		background: $red_h 
 	&:active
 		top: 1px
+	&_height
+		padding: 9px 17px 8px
 	&_prev
 		padding-left: 31px
 		&:before
@@ -29,3 +31,12 @@
 		&:hover
 			background: #FFF
 			color: #565656 
+
+.box
+	position: relative
+	margin: 0 0 17px 
+	padding: 13px 17px 
+	background: #fff
+	box-shadow: 0 2px 1px rgba(0,0,0,.26)
+	
+

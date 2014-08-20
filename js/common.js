@@ -43,4 +43,9 @@ head.ready(function() {
 		};
 	});
 
+	$(".js-filter a").on("click", function(){
+		$(this).toggleClass("is-active");
+		return false;
+	});
+
 });
