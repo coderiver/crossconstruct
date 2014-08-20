@@ -30,17 +30,23 @@ head.ready(function() {
 	var works = $('.works'),
 			works_btn = works.find('.works__btn'),
 			works_list = works.find('.works__list'),
-			works_cur_height = works_list.height();
+			works_cur_height = works_list.height(),
+			white_overlay = $('.js-white-overlay');
 	works_btn.on('click', function () {
 		var works_auto_height = works_list.css('height', 'auto').height();
 		if (!works_btn.hasClass('is-active')) {
 			works_btn.addClass('is-active');
+			white_overlay.fadeIn();
 			works_list.height(works_cur_height).animate({height: works_auto_height}, 300);
 		}
 		else {
 			works_btn.removeClass('is-active');
+			white_overlay.fadeOut();
 			works_list.animate({height: works_cur_height}, 300);
 		};
+	});
+	white_overlay.on('click', function () {
+		works_btn.trigger('click');
 	});
 
 	$(".js-filter a").on("click", function(){

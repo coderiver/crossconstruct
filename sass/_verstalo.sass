@@ -4,20 +4,21 @@
     top: 101px
     left: 0
     right: 0
-    bottom: 51px
+    bottom: 50px
     &_constr
         background: url(../img/constr.jpg) no-repeat 50% 50%
         box-sizing: cover
+    &__in
+        position: relative
+        max-width: 940px
+        margin: 65px auto 0
+        z-index: 2 
+        .back
+            position: absolute
+            top: -41px
+            left: 0
 
 .constr
-    position: relative
-    max-width: 930px
-    margin: 65px auto 0
-    z-index: 2 
-    .back
-        position: absolute
-        top: -41px
-        left: 0
     &__in
         +clr
     &__info
@@ -57,7 +58,7 @@
     &__serv
         position: relative
         float: left
-        width: 307px
+        width: 317px
         height: 275px  
         background: #941d21
         box-shadow: inset 5px 0 0 rgba(0,0,0,.18)
@@ -141,7 +142,7 @@
     &__slider
         position: relative
         float: left
-        width: 610px - 25px
+        width: 585px
         min-height: 184px
         margin-left: 25px 
         background-color: #f1f1f1 
@@ -207,7 +208,8 @@
     bottom: 0
     left: 0
     right: 0
-    z-index: 4 
+    background: $black 
+    z-index: 6
     &__btn
         position: absolute
         width: 146px
@@ -273,6 +275,16 @@
                 margin-bottom: 5px
                 font-size: 16px
 
+.white-overlay
+    display: none
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: rgba(255,255,255,.8) 
+    z-index: 4
+
 .more
     &__link
         position: relative
@@ -304,6 +316,272 @@
             vertical-align: middle
         &:hover
             background: $red_h
+
+
+.dev
+    margin: 0 -10px
+    padding: 0 10px
+    overflow: hidden
+    &__in
+        margin-right: -25px
+        font-size: 0
+    &__main, &__video, &__serv
+        display: inline-block
+        margin: 0 20px 20px 0
+        background: #FFF 
+        vertical-align: top
+    &__main
+        width: 620px
+        min-height: 275px
+        padding: 30px
+    &__head
+        position: relative
+        padding: 0 0 20px 90px
+        margin-bottom: 15px
+        border-bottom: 1px solid #E7E7E7 
+    &__head-ico
+        position: absolute
+        top: -8px
+        left: 0
+        +s(dev-ico)
+    &__head-title
+        margin-bottom: 15px
+        +fsb
+        font-size: 34px
+    &__head-text
+        margin-bottom: 5px
+        color: #6e6e6e
+        line-height: 1.6  
+    &__head-contacts
+        font-size: 14px
+        color: #5F5F5F 
+        li
+            margin-top: 5px
+        span, a
+            +fsb
+            color: $black 
+        a
+            text-decoration: underline
+    &__video, &__serv
+        +tr(box-shadow .2s)
+        &:hover
+            box-shadow: 3px 4px 5px rgba(0,0,0,.1)
+    &__video
+        width: 300px
+        min-height: 275px
+        padding: 12px
+    &__video-pic
+        position: relative
+        margin-bottom: 12px
+        font-size: 0
+        i
+            position: absolute
+            top: 50%
+            left: 50%
+            margin: -39px 0 0 -39px
+            +s(play)
+    &__video-title
+        margin-bottom: 3px
+        +fsb
+        color: $black 
+        font-size: 16px
+    &__video-time
+        font-size: 14px
+        color: #7a7a7a
+    &__serv
+        position: relative
+        width: 300px
+        height: 110px
+        padding: 20px
+        font-size: 16px
+        color: $black
+        &:hover
+            box-shadow: 3px 4px 5px rgba(0,0,0,.1)
+            .dev__serv-ico-1
+                +sp(dev-serv1-h)
+            .dev__serv-ico-2
+                +sp(dev-serv2-h)
+            .dev__serv-ico-3
+                +sp(dev-serv3-h)
+        i
+            position: absolute
+            right: 10px
+            bottom: 5px
+    &__serv-ico-1
+        +s(dev-serv1)
+    &__serv-ico-2
+        +s(dev-serv2)
+    &__serv-ico-3
+        +s(dev-serv3)
+    &__all
+        a
+            display: inline-block
+            font-size: 0
+            color: $black 
+            vertical-align: top
+        span, i
+            display: inline-block
+            vertical-align: top
+        span
+            border-bottom: 1px dotted 
+            +fsb
+            font-size: 14px
+        i
+            margin-left: 10px
+            +s(arr-b-circle-black)
+
+.service
+    margin-bottom: 70px
+    +clr
+    &__head, &__list
+        float: left
+        width: 460px 
+        min-height: 270px
+        background: #fff 
+    &__head
+        position: relative
+        margin-right: 20px
+        padding: 20px 35px
+    &__ico
+        position: absolute
+        top: 25px
+        left: 35px
+        +s(dev-ico)
+    &__title
+        padding: 16px 0 20px 90px 
+        margin-bottom: 15px
+        +fsb
+        font-size: 34px
+    &__text
+        margin-bottom: 30px
+        color: #6e6e6e
+        line-height: 1.6  
+    &__footer
+        +clr
+        .btn
+            float: right
+    &__video
+        float: left
+        font-size: 0
+        span, i
+            display: inline-block
+            vertical-align: middle
+        span
+            border-bottom: 1px dotted 
+            color: $black 
+            +fsb
+            font-size: 14px
+        i
+            margin-left: 8px
+            +s(video)
+    &__list
+        padding: 20px 20px 20px 30px
+    &__contacts
+        margin-bottom: 5px
+        +clr
+        ul
+            float: right
+            font-size: 14px
+            color: #5F5F5F 
+        li
+            margin-bottom: 5px
+        span, a
+            +fsb
+            color: $black 
+        a
+            text-decoration: underline
+    &__list-title
+        margin-bottom: 7px
+        +fsb
+        font-size: 21px
+    &__list-more
+        width: 100%
+        background: none 
+        font-size: 0
+        i
+            display: inline-block
+            +s(arr-b-gray-bigger)
+    &__items
+        margin-bottom: 25px
+        border-top: 1px solid #DBDBDB  
+        li
+            border-bottom: 1px solid #DBDBDB 
+        a
+            position: relative
+            display: block
+            padding: 9px 30px 9px 6px
+            font-size: 16px
+            color: #737373 
+    
+.works-list
+    margin-bottom: 30px
+    &__title
+        margin-bottom: 25px
+        font-size: 0
+        i, span
+            display: inline-block
+            vertical-align: middle
+        i
+            margin-right: 20px
+            +s(works-list-lines)
+        span
+            +fsb
+            font-size: 21px
+    &__in
+        margin-bottom: 10px
+        font-size: 0
+    &__item
+        display: inline-block
+        width: 25%
+        padding-right: 2%
+        margin-bottom: 30px
+        vertical-align: top 
+    &__date
+        margin-bottom: 10px
+        font-size: 14px
+        color: #9A9A9A
+    &__link
+        margin-bottom: 10px
+        a
+            +fsb
+            font-size: 14px
+            color: $black 
+            +tr(color .2s)
+            &:hover
+                color: $red 
+    &__customer
+        position: relative
+        padding-top: 8px
+        font-size: 12px
+        color: #5F5F5F 
+        &:before
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            width: 31px
+            height: 2px
+            background: #D7D7D7 
+    &__all
+        a
+            +fsb
+            font-size: 14px
+            color: $black
+            text-decoration: underline 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
