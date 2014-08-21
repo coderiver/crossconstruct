@@ -51,7 +51,7 @@ head.ready(function() {
 		works_btn.trigger('click');
 	});
 
-	$(".js-filter a").on("click", function(){
+	$(".js-filter-link").on("click", function(){
 		$(this).toggleClass("is-active");
 		return false;
 	});
@@ -71,5 +71,28 @@ head.ready(function() {
 			service.animate({height: service_cur_height}, 300);
 		};
 	});
+
+	function selectList() {
+        	
+            $(".js-select-text").click(function(){
+            	var select = $(this).parents(".js-select");
+            	var select_list = select.find(".js-select-list");
+                if (select.hasClass("is-active")) {
+                    select.removeClass("is-active");
+                }
+                else {
+                    select.addClass("is-active");
+                }
+            });
+            
+        $(".js-select-list a").click(function() {
+                var id = $(this).attr("data-val");
+                var text = $(this).text();
+                $(this).parents(".js-select").find(".js-select-text").text(text);
+                $(this).parents(".js-select").find("input").val(id);
+                $(this).parents(".js-select").removeClass("is-active");
+            });
+    }
+    selectList();
 
 });
