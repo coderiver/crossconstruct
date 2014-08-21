@@ -46,6 +46,15 @@ a { text-decoration: none; }
 
 .push { clear: both; height: 50px; }
 
+.l-cols { *zoom: 1; }
+.l-cols:after { content: " "; display: table; clear: both; }
+
+.l-col1 { float: left; margin-right: 20px; width: 220px; }
+
+.l-col2 { float: left; width: 700px; }
+
+.l-col3 { float: right; width: 220px; }
+
 .l-center { margin: 0 auto; position: relative; padding: 0 30px; max-width: 1440px; min-width: 1000px; }
 .l-center.l-center_small { max-width: 94px; }
 
@@ -128,6 +137,8 @@ a { text-decoration: none; }
 .footer a { color: #303030; -moz-transition: color 0.2s; -o-transition: color 0.2s; -webkit-transition: color 0.2s; transition: color 0.2s; }
 .footer a:hover { color: #a02d31; }
 
+.btn-wrap { text-align: center; }
+
 .btn { position: relative; display: inline-block; padding: 8px 17px 6px; font-size: 12px; border-radius: 13px; text-transform: uppercase; font-family: "opensans-regular", Arial, sans-serif; line-height: 1; color: white; background: #a02d31; -moz-transition: background 0.2s; -o-transition: background 0.2s; -webkit-transition: background 0.2s; transition: background 0.2s; }
 .btn:hover { background: #8a272a; }
 .btn:active { top: 1px; }
@@ -181,9 +192,29 @@ a { text-decoration: none; }
 .constr__serv-title { padding: 13px 0 10px 18px; white-space: normal; font-size: 0; overflow: hidden; }
 .constr__serv-title span, .constr__serv-title i { display: inline-block; vertical-align: middle; }
 .constr__serv-title span { font-family: "opensans-semibold", Arial, sans-serif; font-size: 21px; color: white; text-transform: uppercase; }
+<<<<<<< HEAD
 .constr__serv-title i { margin-left: 10px; background: url('../img/icons-sced71e5858.png') 0 -628px no-repeat; width: 174px; height: 17px; }
 .constr__serv-list { position: relative; height: 127px; z-index: 2; }
 .constr__serv-list ul { height: 127px; overflow: hidden; border-bottom: 1px solid rgba(255, 255, 255, 0.2); background: #941d21; box-shadow: inset 5px 0 0 rgba(0, 0, 0, 0.18); }
+=======
+<<<<<<< HEAD
+.constr__serv-title i { margin-left: 10px; background: url('../img/icons-sced71e5858.png') 0 -628px no-repeat; width: 174px; height: 17px; }
+=======
+<<<<<<< HEAD
+.constr__serv-title i { margin-left: 10px; background: url('../img/icons-sf0c3fb4ccc.png') 0 -576px no-repeat; width: 174px; height: 17px; }
+=======
+.constr__serv-title i { margin-left: 10px; background: url('../img/icons-s3c25ed6c4f.png') 0 -509px no-repeat; width: 174px; height: 17px; }
+<<<<<<< HEAD
+.constr__serv-list { position: relative; height: 127px; z-index: 2; }
+.constr__serv-list ul { height: 127px; overflow: hidden; border-bottom: 1px solid rgba(255, 255, 255, 0.2); background: #941d21; box-shadow: inset 5px 0 0 rgba(0, 0, 0, 0.18); }
+=======
+>>>>>>> c163842dcf139b0c32eb22aab8b5d052e92bf447
+>>>>>>> 987e3405e7a621baef9628dde8802d64334d26f1
+.constr__serv-list { position: relative; height: 127px; overflow: hidden; z-index: 2; }
+.constr__serv-list.is-open { overflow: visible; }
+.constr__serv-list ul { border-bottom: 1px solid rgba(255, 255, 255, 0.2); background: #941d21; box-shadow: inset 5px 0 0 rgba(0, 0, 0, 0.18); }
+>>>>>>> b65bced12debd708c471537dcd895cc93d7c91a8
+>>>>>>> fc45ae074076ace8a5f2ec2a16917293798be8a8
 .constr__serv-list li { border-top: 1px solid rgba(255, 255, 255, 0.2); }
 .constr__serv-list a { position: relative; display: block; padding: 11px 40px 11px 18px; font-size: 14px; color: white; -moz-transition: background 0.2s; -o-transition: background 0.2s; -webkit-transition: background 0.2s; transition: background 0.2s; }
 .constr__serv-list a:hover { background: #6a1014; }
@@ -290,10 +321,15 @@ a { text-decoration: none; }
 .service__contacts a { text-decoration: underline; }
 .service__list-title { margin-bottom: 7px; font-family: "opensans-semibold", Arial, sans-serif; font-size: 21px; }
 .service__list-more { width: 100%; background: none; font-size: 0; }
+<<<<<<< HEAD
+.service__list-more i { display: inline-block; background: url('../img/icons-sced71e5858.png') 0 -109px no-repeat; width: 19px; height: 11px; }
+.service__items { margin-bottom: 25px; border-top: 1px solid #dbdbdb; }
+=======
 .service__list-more.is-active i { -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); }
 .service__list-more i { display: inline-block; -moz-transition: -moz-transform 0.2s; -o-transition: -o-transform 0.2s; -webkit-transition: -webkit-transform 0.2s; transition: transform 0.2s; background: url('../img/icons-sced71e5858.png') 0 -109px no-repeat; width: 19px; height: 11px; }
 .service__items { height: 83px; margin-bottom: 25px; border-top: 1px solid #dbdbdb; overflow: hidden; }
 .service__items.is-open { height: auto; }
+>>>>>>> 987e3405e7a621baef9628dde8802d64334d26f1
 .service__items li { border-bottom: 1px solid #dbdbdb; }
 .service__items a { position: relative; display: block; padding: 9px 30px 9px 6px; font-size: 16px; color: #737373; }
 
@@ -445,6 +481,23 @@ a { text-decoration: none; }
 .item_has-corner:after { content: ""; position: absolute; top: 0; right: 0; width: 0px; height: 0px; border-style: solid; border-width: 13px 0 0 13px; border-color: transparent transparent transparent #e1e1e1; }
 .item_has-corner:before { content: ""; position: absolute; top: 0; right: 0; width: 0px; height: 0px; border-style: solid; border-width: 0 13px 13px 0; border-color: transparent whitesmoke transparent transparent; }
 
+.contact-item-wrap { padding-top: 14px; }
+
+.contact-item { display: inline-block; margin-right: 26px; vertical-align: top; position: relative; padding-left: 12px; }
+.contact-item:first-child { padding-left: 0; }
+.contact-item:first-child:before { display: none; }
+.contact-item:before { content: ""; position: absolute; top: -3px; left: 0; width: 1px; height: 25px; background: #efefef; }
+.contact-item a { display: inline-block; padding: 1px 6px; font-size: 11px; text-transform: uppercase; color: #191919; border-radius: 8px; background: #ededed; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
+.contact-item a:hover { background: #a02d31; color: white; }
+
+.contacts { margin: 0 0 30px; color: #191919; }
+.contacts__title { margin: 0 0 10px; border-bottom: 4px solid #a02d31; padding: 0 0 14px; font-size: 18px; font-family: "opensans-semibold", Arial, sans-serif; }
+.contacts__list li { display: inline-block; padding: 16px 0 0; width: 235px; vertical-align: top; font-size: 14px; color: #5f5f5f; }
+.contacts__list strong { display: block; margin: 0 0 12px; font-weight: normal; font-size: 18px; font-family: "opensans-semibold", Arial, sans-serif; }
+.contacts__list span { font-family: "opensans-semibold", Arial, sans-serif; color: #191919; }
+.contacts__list a { color: #191919; text-decoration: underline; }
+.contacts__list a:hover { text-decoration: none; }
+
 .map { position: relative; margin: 0 0 32px; height: 380px; }
 .map__body { position: absolute; top: 0; bottom: 0; left: -40px; right: -40px; }
 
@@ -467,3 +520,17 @@ a { text-decoration: none; }
 .captcha__item span:after { content: ""; position: absolute; left: 7px; top: 9px; background: url('../img/icons-sced71e5858.png') 0 -388px no-repeat; width: 11px; height: 8px; }
 .captcha__item input { vertical-align: middle; cursor: pointer; opacity: 0; }
 .captcha__item input:checked + span { display: block; }
+
+.sidebar-banner { display: inline-block; margin-bottom: 20px; }
+
+.sidebar { border: 1px solid #ededed; border-top: 5px solid #191919; background: white; }
+.sidebar_nav .sidebar__item { padding: 0; }
+.sidebar__item { border-top: 1px solid #d7d7d7; padding: 13px 18px; }
+.sidebar__item:first-child { border: 0; }
+.sidebar__title { padding: 5px 0; font-size: 18px; font-family: "opensans-semibold", Arial, sans-serif; }
+.sidebar__tel { text-transform: uppercase; font-size: 14px; }
+.sidebar__tel strong { display: block; font-weight: normal; font-family: "opensans-semibold", Arial, sans-serif; font-size: 18px; }
+.sidebar__email { color: #7b7b7b; font-size: 14px; }
+.sidebar__email a { color: #191919; text-decoration: underline; font-family: "opensans-semibold", Arial, sans-serif; }
+.sidebar__email a:hover { text-decoration: none; }
+.sidebar .btn-wrap { padding: 32px 0 28px; }
