@@ -76,4 +76,13 @@ head.ready(function() {
             });
     }
     selectList();
+
+    $(".js-scroll-to").on("click",function(){
+		var section = $(this).attr("data-section");
+		var sectionTop = $("."+section).offset().top;
+		$('html, body').animate({
+            scrollTop: sectionTop
+        }, 200); 
+		return false;
+	});
 });
