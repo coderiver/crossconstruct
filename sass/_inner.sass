@@ -14,7 +14,7 @@
 	background: #fff
 	box-shadow: 0 0 24px rgba(0,0,0,.15)
 	&_mod
-		padding: 21px 10px 30px 25px
+		padding: 20px
 		.article
 			img[align="left"]
 				margin: 0 28px 40px 0 
@@ -150,7 +150,33 @@
 		color: #fff
 		text-decoration: none
 		&:hover
-			text-decoration: none 
+			text-decoration: none  
+	.map
+		margin: 0
+		&__body
+			left: 0
+			right: 0
+.table
+	color: #636363
+	font-size: 14px 
+	caption
+		border-bottom: 2px solid $red 
+		padding: 0 0 20px 
+		font-size: 30px
+		font-weight: normal
+		+fsb
+		color: $black 
+		text-align: left
+		span
+			display: block
+			font-size: 14px
+			color: #5f5f5f 
+	tr
+		&:nth-child(2n)
+			td
+				background: #e8e8e8 
+	td
+		padding: 7px 9px 
 .posts-wrap
 	margin: 0 auto 
 	max-width: 1260px
@@ -634,3 +660,33 @@
 			&:checked
 				+ span
 					display: block
+.project-head
+	margin-bottom: 5px
+	+clr
+	.slider
+		float: left
+		margin-right: 20px
+		width: 340px
+	.table-wrap
+		overflow: hidden
+.slider
+	position: relative
+	overflow: hidden
+	padding-bottom: 14px
+	img
+		display: block
+	&__pager
+		position: absolute
+		left: 0
+		right: 0
+		bottom: -5px
+		z-index: 5
+		button
+			margin-right: 3px
+			vertical-align: middle
+			width: 6px
+			height: 6px
+			border-radius: 50%
+			background-color: #d3d3d3
+			&.is-active
+				background: $black 

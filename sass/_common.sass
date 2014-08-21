@@ -75,8 +75,13 @@ $red_h: #aa2328
 html
 	+selection
 		background: rgba($red,.3) 
+	&.has-open-popup
+		overflow: hidden
+		body
+			overflow: hidden
 body
 	min-width: 1024px
+	min-height: 840px
 	font-family: Arial, sans-serif 
 	font-size: 16px 
 	line-height: 1.4
@@ -102,17 +107,26 @@ a
 	clear: both
 	height: 50px
 .l-cols
-	+clr
+	display: table
+	width: 100%
+	table-layout: fixed
 .l-col1
-	float: left
+	display: table-cell
+	vertical-align: top
 	width: 220px
 .l-col2
-	float: left
-	margin: 0 20px 
-	width: 700px
+	display: table-cell
+	vertical-align: top
+	padding: 0 20px 
+	+r(1260)
+		padding-right: 0
 .l-col3
-	float: left
+	display: table-cell
+	vertical-align: top
 	width: 220px
+	+r(1260)
+		display: none
+		width: 0
 // common blocks      
 
 .l-center

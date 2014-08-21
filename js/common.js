@@ -1,8 +1,11 @@
 head.ready(function() {
 
-	// $(document).on("click", function(){
-	// 	$(".js-popup").hide();
-	// });
+	$(document).on("click", function(){
+		$(".js-popup").hide();
+		$(".js-select").removeClass("is-active");
+		$(".js-overlay").hide();
+		$("html").removeClass("has-open-popup");
+	});
 
 	$(".js-show-nav").on("click", function(){
 		$(".js-nav").toggleClass("is-active");
@@ -74,7 +77,7 @@ head.ready(function() {
 
 	function selectList() {
         	
-            $(".js-select-text").click(function(){
+            $(".js-select-text").click(function(event){
             	var select = $(this).parents(".js-select");
             	var select_list = select.find(".js-select-list");
                 if (select.hasClass("is-active")) {
@@ -83,22 +86,21 @@ head.ready(function() {
                 else {
                     select.addClass("is-active");
                 }
+                event.stopPropagation();
             });
             
-        $(".js-select-list a").click(function() {
+        $(".js-select-list a").click(function(event) {
                 var id = $(this).attr("data-val");
                 var text = $(this).text();
                 $(this).parents(".js-select").find(".js-select-text").text(text);
                 $(this).parents(".js-select").find("input").val(id);
                 $(this).parents(".js-select").removeClass("is-active");
+                return false;
+                event.stopPropagation();
             });
     }
     selectList();
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 47b40d991be62d6647ffdf6c7a1992ffb5f1139c
     $(".js-scroll-to").on("click",function(){
 		var section = $(this).attr("data-section");
 		var sectionTop = $("."+section).offset().top;
@@ -108,4 +110,61 @@ head.ready(function() {
 		return false;
 	});
 
+	$(".js-popup-link").on("click", function(event){
+		$(".js-overlay").fadeIn(200);
+		var popup = $(this).attr("href");
+		$("html").addClass("has-open-popup");
+		$("."+popup).fadeIn(200);
+		event.stopPropagation();
+		return false; 
+	});
+	$(".js-popup-close").on("click", function(){
+		$(".js-overlay").fadeOut(200); 
+		$(".js-popup").fadeOut(200); 
+		$("html").removeClass("has-open-popup")
+		return false;
+	});
+	$(".js-popup .popup").on("click", function(event){
+		event.stopPropagation();
+	});
+	function accordion() {
+        $(".js-accord-title").on("click", function(){
+        	if ($(this).parents(".js-accord").hasClass("is-active")) {
+        		$(this).parents(".js-accord-wrap").find(".js-accord").removeClass("is-active").find(".js-accord-body").slideUp("fast");
+        	}
+        	else {
+        			$(this).parents(".js-accord-wrap").find(".js-accord").removeClass("is-active").find(".js-accord-body").slideUp("fast");
+        		    $(this).parents(".js-accord").toggleClass("is-active").find(".js-accord-body").slideToggle("fast");
+        	}
+        	
+        });
+    }
+    accordion();
+    function tab() {
+        $(".js-tab").each(function(){
+
+            var tab_link = $(this).find("a");
+            var tab_cont = $(this).parents(".js-tab-group").find(".js-tab-cont");
+            tab_cont.hide();
+            $(this).parents(".js-tab-group").find(".js-tab1").show();
+
+            tab_link.bind("click", function() {
+            	if ($(this).hasClass("is-active")) {
+            		return false;
+            	}
+            	else {
+            		var index = $(this).attr("href");
+	                tab_link.removeClass("is-active");
+	                tab_link.parent().removeClass("is-active");
+	                $(this).addClass("is-active");
+	                $(this).parent().addClass("is-active");
+	                tab_cont.hide();
+	                $(this).parents(".js-tab-group").find("."+index).toggle();
+            	}
+               	return false;
+            });
+        });
+    }
+    tab();
+ 
 });

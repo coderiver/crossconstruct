@@ -278,7 +278,7 @@
 	<div class="l-center">
 		<div class="l-cols">
 			<div class="l-col1">
-				<a href="#" class="sidebar-banner"><img src="img/banner.png" alt="img"></a>
+				<a href="#" class="sidebar-logo"><img src="img/banner.png" alt="img"></a>
 				<div class="sidebar">
 					<div class="sidebar__item">
 						<div class="sidebar__title">Заказ услуги</div>
@@ -296,16 +296,43 @@
 						</div>
 					</div>
 					<div class="sidebar__item btn-wrap">
-						<a href="#" class="btn">Оставить заявку</a>
+						<a href="js-popup-vacancy" class="btn js-popup-link">Оставить заявку</a>
 					</div>
+				</div>
+				<div class="sidebar is-middle-viewport">
+					<ul class="sidebar__nav">
+						<li>
+							<a href="#">История компании</a>
+						</li>
+						<li>
+							<a href="#">Философия компании</a>
+							<ul>
+								<li><a href="#">История компании</a></li>
+								<li><a href="#">Идея</a></li>
+								<li>
+									<a href="#">Принципы</a>
+									<ul>
+										<li><a href="#">История компании</a></li>
+										<li><a href="#">Идея</a></li>
+										<li><a href="#">Принципы</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Информация для инвесторов и партнёров</a>
+						</li>
+						<li>
+							<a href="#">Вакансии</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 			<div class="l-col2">
 				<a href="#" class="btn-back"><i></i>Назад</a>
 				<div class="page-content page-content_mod">
 					<article class="article">
-						<h1>Стилевая страница</h1>
-						<h2>Профессионализм</h2>
+						<h2>Общее описание проекта</h2>
 						<blockquote>
 							После завершения строительства Зимнего дворца вся площадь была завалена строительным мусором. Император Пётр III решил избавиться от него оригинальным способом — он приказал объявить народу, что каждый желающий может взять с площади всё, что угодно, и бесплатно. Через несколько часов весь мусор был расчищен.
 						</blockquote>
@@ -411,6 +438,94 @@
 		<div class="footer__col">Разработка: <a href="#">ARTSOFTE</a></div>
 	</div>
 </div>
+<div class="overlay js-overlay"></div>
+<!-- BEGIN popup -->
+<div class="popup-wrap js-popup js-popup-vacancy">
+	<div class="popup">
+		<div class="popup__title">Заявка на вакансию</div>
+		<div class="wrap">
+			<div class="popup__left">
+				<label class="field">
+					<span class="field__title">Ваше имя<sup>*</sup></span>
+					<input type="text" class="input">
+				</label>
+				<label class="field">
+					<span class="field__title">Телефон для связи<sup>*</sup></span>
+					<input type="tel" class="input">
+				</label>
+				<label class="field has-error">
+					<span class="field__title">E-mail<sup>*</sup></span>
+					<input type="email" class="input">
+					<span class="field__error">Ошибка ввода, пожалуйста повторите</span>
+				</label>
+			</div>
+			<div class="popup__right">
+				<div class="field">
+					<span class="field__title">Выберите специализацию</span>
+					<div class="select select_white js-select">
+						<div class="select__text js-select-text">Фрезеровщик</div>
+						<ul class="select__list js-select-list">
+							<li><a href="#" data-val="Фрезеровщик">Фрезеровщик</a></li>
+							<li><a href="#" data-val="Фрезеровщик">Фрезеровщик</a></li>
+							<li><a href="#" data-val="Фрезеровщик">Фрезеровщик</a></li>
+							<li><a href="#" data-val="Фрезеровщик">Фрезеровщик</a></li>
+						</ul>
+						<input type="hidden">
+					</div>
+				</div>
+				<div class="field">
+					<span class="field__title">Выберите пол</span>
+					<label class="radio">
+						<input type="radio" name="gender" checked>
+						<span class="radio__text">Мужской</span>
+					</label>
+					<label class="radio">
+						<input type="radio" name="gender">
+						<span class="radio__text">Женский</span>
+					</label>
+				</div>
+				<div class="field">
+					<label class="checkbox">
+						<input type="checkbox">
+						<span class="checkbox__text">Имеете стаж работы больше трех лет</span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<label class="field">
+			<span class="field__title">Текст письма<sup>*</sup></span>
+			<textarea class="input input_textarea"></textarea>
+		</label>
+		<div class="field">
+			<span class="field__title">Выберите синий круг<sup>*</sup></span>
+			<div class="captcha">
+				<label class="captcha__item is-red">
+					<input type="radio" name="captcha">
+					<span></span>
+				</label>
+				<label class="captcha__item is-green">
+					<input type="radio" name="captcha">
+					<span></span>
+				</label>
+				<label class="captcha__item is-yellow">
+					<input type="radio" name="captcha">
+					<span></span>
+				</label>
+				<label class="captcha__item is-blue">
+					<input type="radio" name="captcha">
+					<span></span>
+				</label>
+			</div>
+		</div>
+		<div class="field">
+			<div class="field__btn">
+				<button class="btn" type="submit">Отправить заявку</button>
+			</div>
+		</div>
+		<button type="button" class="popup__close js-popup-close"></button>
+	</div>
+</div>
+<!-- END popup -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>
 </html>

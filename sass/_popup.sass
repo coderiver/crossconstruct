@@ -1,0 +1,59 @@
+.overlay
+    display: none
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 100
+    background: rgba(#fff,.93)
+.popup-wrap
+    display: none
+    position: fixed
+    padding: 24px 20px 
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 101
+    +vertical
+    overflow-y: auto
+.popup
+    position: relative 
+    display: inline-block
+    vertical-align: middle
+    padding: 20px 30px 
+    width: 820px
+    font-size: 16px
+    background: #fff
+    text-align: left
+    box-shadow: 0 2px 122px rgba(0,0,0,.23)
+    &__title
+        margin: 0 0 33px 
+        font-size: 21px
+        +fsb
+    &__left
+        float: left
+        width: 48%
+    &__right
+        float: right
+        width: 48%
+    &__close
+        position: absolute
+        top: 0
+        right: -41px
+        width: 41px
+        height: 43px
+        background: $red
+        +tr(background .2s)
+        &:after
+            content: ""
+            display: inline-block
+            vertical-align: middle
+            +s(close-w)
+        &:hover
+            background: $red_h 
+        &:active
+            top: 1px
+            background: #941d21 
+             

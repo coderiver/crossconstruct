@@ -1,16 +1,24 @@
-.sidebar-banner
+.sidebar-logo
     display: inline-block
-    margin: 58px 0 20px
+    margin: 80px 0 20px
 .l-col3
     .sidebar
         margin-top: 58px
+
 .sidebar
-    border: 1px solid #ededed
+    margin: 0 0 48px 
+    box-shadow: 0 0 0 1px #ededed
     border-top: 5px solid $black 
     background: #fff
+    + .banner
+        margin-top: -20px
     &_nav
         .sidebar__item
             padding: 0
+    &__in
+        padding: 0 18px 
+        .sidebar__title
+            padding: 18px 0 
     &__item
         border-top: 1px solid #d7d7d7 
         padding: 13px 18px 
@@ -78,3 +86,81 @@
                 font-size: 13px
                 a
                     padding-left: 40px
+                    
+    &__projects
+        white-space: nowrap
+        padding: 0 20px 0 0 
+        i,span
+            display: inline-block
+            vertical-align: middle
+            white-space: normal
+        i
+            width: 63px
+            height: 63px
+            background: $black
+            border-radius: 50%  
+            font-style: normal
+            color: #fff
+            line-height: 63px
+            text-align: center
+            font-size: 37px 
+        span
+            margin-left: 6px
+            font-size: 14px
+            color: #5f5f5f 
+                    
+.accord
+    border-top: 1px solid #d7d7d7
+    padding: 11px 0 
+    &.is-active
+        .accord__title
+            font-size: 13px
+            +fsb
+            &:after
+                +s(arr-t-red)
+        .progress
+            &__line
+                height: 19px
+                background-image: url(../img/progress-big.png)
+                
+    &__title
+        position: relative 
+        text-transform: uppercase
+        padding-right: 30px
+        font-size: 11px
+        cursor: pointer
+        +unselectable
+        &:after
+            content: ""
+            position: absolute
+            top: 50%
+            right: 10px
+            margin-top: -3px
+            +s(arr-b)
+    &__body
+        display: none
+        padding: 14px 0 5px 
+        font-size: 13px
+        color: #959595 
+    .progress
+        margin-top: 7px
+.progress
+    position: relative
+    font-size: 0
+    white-space: nowrap
+    &__line,
+    &__info
+        display: inline-block
+        vertical-align: middle
+        font-size: 11px
+    &__line
+        margin-right: 11px
+        height: 16px
+        background: url(../img/progress.png) 0 0 repeat 
+.banner
+    display: block
+    overflow: hidden
+.is-middle-viewport
+    display: none
+    +r(1260)
+        display: block 
