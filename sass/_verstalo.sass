@@ -576,13 +576,233 @@
             color: $black
             text-decoration: underline 
 
-
-
-
-
-
-
-
+.engin
+    padding-top: 40px
+    +clr
+    &__left
+        float: left
+        width: 290px
+        +r(1280)
+            width: 220px
+    &__right
+        float: right
+        width: 290px
+        padding-top: 70px 
+        +r(1280)
+            width: 220px
+    &__center
+        padding-top: 15px
+        overflow: hidden
+    &__banner
+        margin-bottom: 50px
+        img
+            max-width: 100%
+    &__video
+        position: relative
+        display: block
+        padding: 19px 19px 14px
+        margin-bottom: 40px
+        border: 1px solid #ededed
+        background-color: #fff
+        &:after
+            content: ""
+            position: absolute
+            left: 0
+            right: 0
+            bottom: -20px
+            height: 14px
+            +background-image(radial-gradient(50% 50%, rgba(0,0,0,.2) rgba(0,0,0,0)))
+    &__video-pic
+        position: relative
+        margin-bottom: 7px
+        i
+            position: absolute
+            top: 50%
+            left: 50%
+            margin: -39px 0 0 -39px
+            +s(play-black)
+        img
+            display: block
+            max-width: 100%
+    &__video-title
+        font-size: 11px
+        color: #5F5F5F
+        span
+            +fsb
+            font-size: 14px
+            color: $black 
+    &__projects
+        margin-bottom: 40px
+    &__projects-counter
+        margin-bottom: 15px
+        font-size: 0
+    &__projects-value,
+    &__projects-text
+        display: inline-block
+        vertical-align: middle
+    &__projects-value
+        width: 64px 
+        height: 64px
+        margin-right: 10px
+        background: #FFF
+        border-radius: 50%
+        text-align: center
+        line-height: 64px
+        font-size: 37px 
+    &__projects-text
+        max-width: 150px
+        font-size: 14px
+        color: #5F5F5F 
+        line-height: 1.2
+    &__projects-in
+        position: relative
+        display: block
+        margin-bottom: 40px
+        padding: 19px 19px 14px
+        margin-bottom: 40px
+        border: 1px solid #ededed
+        background-color: #fff
+        &:after, &:before
+            content: ""
+            position: absolute
+        &:after 
+            left: 0
+            right: 0
+            bottom: -20px
+            height: 14px
+            +background-image(radial-gradient(50% 50%, rgba(0,0,0,.2) rgba(0,0,0,0)))
+        &:before
+            left: 20px
+            right: 20px
+            bottom: -11px
+            height: 10px
+            +background-image(radial-gradient(50% 50%, rgba(0,0,0,.15) rgba(0,0,0,0)))
+    &__projects-pic
+        margin-bottom: 10px
+        img
+            display: block
+            max-width: 100%
+    &__projects-title
+        margin-bottom: 2px
+        +fsb
+        font-size: 14px
+        color: $black 
+    &__projects-address
+        margin-bottom: 5px
+    &__projects-address, &__projects-date
+        font-size: 12px
+        color: #5F5F5F 
+    &__projects-date
+        position: relative
+        padding-top: 6px
+        &:before
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            width: 31px
+            height: 2px
+            background: #D7D7D7 
+    &__projects-back
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        i, &:after, &:before
+            position: absolute
+            width: 4px
+            border: 1px solid #ededed
+            background: #FFF 
+            border-width: 1px 0 1px 1px
+        i
+            top: 7px
+            bottom: 7px
+            left: -5px
+            &:first-child
+                top: 14px
+                bottom: 14px
+                left: -9px
+        &:before, &:after
+            content: ""
+        &:before
+            top: 21px
+            bottom: 21px
+            left: -13px
+        &:after
+            top: 28px
+            bottom: 28px
+            left: -17px
+    &__info 
+        position: relative
+        max-width: 450px
+        margin: 0 auto 70px
+        padding: 25px 35px 40px
+        background: #FFF 
+        &:after
+            content: ""
+            position: absolute
+            left: 0
+            right: 0
+            bottom: -40px
+            height: 14px
+            +background-image(radial-gradient(50% 50%, rgba(0,0,0,.2) rgba(0,0,0,0)))
+    &__ico
+        display: block
+        margin: 0 auto 10px
+        vertical-align: top
+        +s(engin-ico)
+    &__title
+        margin-bottom: 10px
+        +fsb
+        font-size: 34px
+        text-transform: uppercase
+    &__text
+        margin-bottom: 25px 
+        color: #6e6e6e
+        font-size: 16px
+        a
+            +fsb
+            text-decoration: underline
+            color: $black 
+    &__serv
+        margin-bottom: 25px
+    &__serv-title
+        margin-bottom: 3px
+        +fsb
+        font-size: 21px
+    &__serv-list
+        margin-bottom: 7px
+        border-top: 1px solid #DBDBDB 
+        li
+            border-bottom: 1px solid #DBDBDB 
+        a
+            position: relative
+            display: block
+            padding: 9px 30px 9px 6px
+            font-size: 18px
+            color: #737373 
+            &:after 
+                content: ""
+                position: absolute
+                top: 15px
+                right: 9px
+                +s(arr-r)
+    &__serv-all
+        a
+            +fsb
+            color: $black
+            text-decoration: underline 
+            font-size: 14px
+    &__contacts
+        font-size: 14px
+        color: #5F5F5F 
+        li
+            margin-top: 5px
+        span, a
+            +fsb
+            color: $black 
+        a
+            text-decoration: underline
 
 
 

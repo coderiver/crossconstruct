@@ -95,7 +95,10 @@ head.ready(function() {
     }
     selectList();
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 47b40d991be62d6647ffdf6c7a1992ffb5f1139c
     $(".js-scroll-to").on("click",function(){
 		var section = $(this).attr("data-section");
 		var sectionTop = $("."+section).offset().top;
