@@ -13,6 +13,13 @@
 	padding: 21px 40px 30px
 	background: #fff
 	box-shadow: 0 0 24px rgba(0,0,0,.15)
+	&_mod
+		padding: 21px 10px 30px 25px
+		.article
+			img[align="left"]
+				margin: 0 28px 40px 0 
+			img[align="right"]
+				margin: 0 0 40px 28px
 	.page-title
 		margin-bottom: 11px
 .article
@@ -22,32 +29,37 @@
 	+clr
 	.date
 		margin-bottom: 27px
+	
+
 	h1,h2,h3,h4,h5,h6
 		+fsb
 		font-weight: normal
 	h1
 		margin: 0 0 11px 
-		font-size: 30px
+		font-size: 31px
 	h2
-		margin: 14px 0 4px 
+		margin: 14px 0 8px 
 		font-size: 24px
 	h3
-		margin: 14px 0 4px 
-		font-size: 22px
+		margin: 14px 0 8px 
+		font-size: 21px
 	h4
-		margin: 14px 0 4px 
+		margin: 14px 0 8px 
 		font-size: 20px
 	h5
-		margin: 14px 0 4px 
+		margin: 14px 0 8px 
 		font-size: 18px 
 	h6
-		margin: 14px 0 4px 
+		margin: 14px 0 8px 
 		font-size: 16px
 	p
 		margin-bottom: 14px
-	img
-		float: left
-		margin: 0 40px 10px 0 
+	img[align="left"]
+		margin: 0 40px 40px 0 
+		+ p
+			margin-bottom: 35px
+	img[align="right"]
+		margin: 0 0 40px 40px
 		+ p
 			margin-bottom: 35px
 	em, i
@@ -64,32 +76,34 @@
 		&:hover
 			text-decoration: underline
 	ul
-		margin: 14px 0
+		margin: 14px 0 34px
+		color: #464545 
 		li
 			position: relative
-			padding-left: 20px
+			margin-bottom: 6px
+			padding-left: 40px
 			&:before
-				content: ""
+				content: "—"
 				position: absolute
-				left: 0
-				top: 10px
-				width: 4px
-				height: 4px
-				background: $black
-				border-radius: 50%  
-	ol
-		margin: 14px 0
-		counter-reset: list1
-		li
-			position: relative
-			padding-left: 20px
-			&:before
-				content: ""
-				position: absolute
-				left: 0
+				left: 10px
 				top: 0
 				font-size: 16px
-				//color: $orange  
+				color: $red
+	ol
+		margin: 14px 0 34px
+		counter-reset: list1
+		color: #464545 
+		li
+			position: relative
+			margin-bottom: 6px
+			padding-left: 40px
+			&:before
+				content: ""
+				position: absolute
+				left: 10px
+				top: 0
+				font-size: 16px
+				color: $red  
 				counter-increment: list1  
 				content: counter(list1) ". "
 	hr
@@ -97,6 +111,46 @@
 		border: 0
 		height: 1px
 		background: #dcdcdc 
+	blockquote
+		position: relative
+		margin: 23px 0 34px 
+		border-top: 1px solid #d5d5d5 
+		border-bottom: 1px solid #d5d5d5 
+		padding: 17px 10px 17px 70px 
+		color: #6e6e6e 
+		font-size: 18px
+		+fit 
+		&:before
+			content: ""
+			position: absolute
+			top: 25px
+			left: 18px 
+			+s(quote)
+	table
+		margin: 34px 0 
+		color: #636363
+		font-size: 14px 
+		caption
+			border-bottom: 2px solid $red 
+			padding: 0 0 11px 
+			font-size: 18px
+			font-weight: normal
+			+fsb
+			color: $black 
+			text-align: left
+		tr
+			&:nth-child(2n)
+				td
+					background: #e8e8e8 
+		td
+			padding: 7px 9px 
+	.btn-wrap
+		margin: 30px 0 
+	.btn
+		color: #fff
+		text-decoration: none
+		&:hover
+			text-decoration: none 
 .posts-wrap
 	margin: 0 auto 
 	max-width: 1260px

@@ -16,6 +16,7 @@
 		background: $red_h 
 	&:active
 		top: 1px
+		background: #941d21 
 	&_height
 		padding: 9px 17px 8px
 	&_prev
@@ -38,7 +39,24 @@
 		margin: -2px 0 0 3px
 		vertical-align: middle
 		+s(btn-arr-d)
-
+.btn-back
+	display: inline-block
+	border: 2px solid #eaeaea
+	padding: 6px 22px 7px 10px 
+	border-radius: 15px
+	font-size: 14px
+	+fr
+	line-height: 1
+	color: $black 
+	+tr(border .2s linear)
+	&:hover
+		border-color: #bebebe
+	i
+		display: inline-block
+		margin-right: 8px
+		vertical-align: middle
+		+s(btn-back)
+	
 .box
 	position: relative
 	margin: 0 0 17px 

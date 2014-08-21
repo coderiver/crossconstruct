@@ -1,6 +1,9 @@
 .sidebar-banner
     display: inline-block
-    margin-bottom: 20px
+    margin: 58px 0 20px
+.l-col3
+    .sidebar
+        margin-top: 58px
 .sidebar
     border: 1px solid #ededed
     border-top: 5px solid $black 
@@ -37,3 +40,41 @@
     
     .btn-wrap
         padding: 32px 0 28px 
+    &__nav
+        font-size: 14px
+        li
+
+            &:hover
+                background: #fcfcfc 
+                > ul
+                    display: block
+        a
+            display: block
+            position: relative 
+            border-bottom: 1px solid #d7d7d7 
+            padding: 11px 20px 
+            color: #444
+            overflow: hidden
+            +tr(background .2s)
+            &:after
+                content: ""
+                position: absolute
+                top: 0
+                right: 0
+                bottom: 0
+                width: 7px
+                background: $red 
+                display: none
+            &:hover
+                background: #f0f0f0 
+                &:after
+                    display: block
+
+        ul
+            display: none
+            a
+                padding-left: 30px
+            ul
+                font-size: 13px
+                a
+                    padding-left: 40px
