@@ -160,7 +160,27 @@
 .banner
     display: block
     overflow: hidden
+    margin-bottom: 25px 
+    img
+        display: block
 .is-middle-viewport
-    display: none
+    display: none !important
     +r(1260)
-        display: block 
+        display: block !important
+        
+.sidebar-target
+    display: block
+    margin: 25px 0 
+    padding: 19px 11px 19px 17px 
+    background: #fff 
+    white-space: nowrap
+    span, i
+        display: inline-block
+        white-space: normal
+        vertical-align: middle
+    span
+        width: 160px
+        color: #444
+        font-size: 14px
+    i
+        +s(scroll-to)

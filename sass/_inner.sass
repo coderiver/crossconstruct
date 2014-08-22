@@ -127,6 +127,7 @@
 			left: 18px 
 			+s(quote)
 	table
+		width: 100%
 		margin: 34px 0 
 		color: #636363
 		font-size: 14px 
@@ -138,12 +139,23 @@
 			+fsb
 			color: $black 
 			text-align: left
-		tr
-			&:nth-child(2n)
-				td
-					background: #e8e8e8 
-		td
-			padding: 7px 9px 
+		thead
+			th
+				border-top: 2px solid $red 
+				border-bottom: 2px solid $red 
+				padding: 5px 9px 10px
+				font-weight: normal
+				font-size: 16px
+				+fsb
+				color: $black 
+				text-align: left
+		tbody
+			tr
+				&:nth-child(2n)
+					td
+						background: #e8e8e8 
+			td
+				padding: 7px 9px 
 	.btn-wrap
 		margin: 30px 0 
 	.btn
@@ -156,6 +168,8 @@
 		&__body
 			left: 0
 			right: 0
+	.slider
+		margin-bottom: 30px
 .table
 	color: #636363
 	font-size: 14px 
@@ -692,3 +706,24 @@
 			background-color: #d3d3d3
 			&.is-active
 				background: $black 
+				
+.projects-slider
+	position: relative
+	margin-bottom: 30px
+	padding-top: 60px
+	.slick-slide
+		text-align: center
+	.slick-active
+		.item
+			box-shadow: 0 1px 1px rgba(0,0,0,.13)
+	.item
+		width: 215px
+		box-shadow: none 
+	.projects-counter
+		position: absolute
+		right: 72px
+		top: 0
+		height: 43px
+		line-height: 43px
+		font-size: 16px
+		+fit

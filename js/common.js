@@ -166,5 +166,44 @@ head.ready(function() {
         });
     }
     tab();
+
+    $('.js-slick').slick({
+	  dots: false,
+	  arrows: true,
+	  infinite: false,
+	  speed: 300,
+	  slidesToShow: 6,
+	  slidesToScroll: 6,
+	  responsive: [
+	    {
+	      breakpoint: 1385,
+	      settings: {
+	        slidesToShow: 5,
+	        slidesToScroll: 5,
+	        infinite: false,
+	      }
+	    },
+	    {
+	      breakpoint: 1185,
+	      settings: {
+	        slidesToShow: 4,
+	        slidesToScroll: 4,
+	        infinite: false,
+	      }
+	    }
+	  ]
+	});
+
+	function slideCounter() {
+		var counter_all = +$(".js-slick-slide").length-$(".js-slick-slide.slick-cloned").length;
+		var counter = $(".js-slick-slide.slick-active").length;
+		$(".js-projects-active").text(counter);
+		$(".js-projects-all").text(counter_all);
+	}
+	slideCounter();
+	// $(window).resize(function(){
+	// 	slideCounter();	
+	// });
+
  
 });
