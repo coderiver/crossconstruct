@@ -216,7 +216,7 @@
 	background: #fff
 	font-size: 16px
 	color: $black  
-	+tr
+	+tr(box-shadow .2s)
 	+fr
 	&:hover
 		box-shadow: 0 2px 12px rgba(0,0,0,.14)
@@ -688,6 +688,7 @@
 .slider
 	position: relative
 	overflow: hidden
+	z-index: 1
 	padding-bottom: 14px
 	img
 		display: block

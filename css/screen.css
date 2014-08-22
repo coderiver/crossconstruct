@@ -36,7 +36,7 @@ html ::-moz-selection { background: rgba(160, 45, 49, 0.3); }
 html.has-open-popup { overflow: hidden; }
 html.has-open-popup body { overflow: hidden; }
 
-body { min-width: 1024px; min-height: 840px; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.4; font-family: "opensans-regular", Arial, sans-serif; background: whitesmoke; }
+body { min-width: 1000px; min-height: 840px; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.4; font-family: "opensans-regular", Arial, sans-serif; background: whitesmoke; }
 
 a { text-decoration: none; }
 
@@ -71,7 +71,7 @@ a { text-decoration: none; }
 .header__nav:hover { color: #303030; }
 .header__nav:before { content: ""; position: absolute; top: 2px; left: 0; background: url('../img/icons-sd3cee9d9ba.png') 0 -1346px no-repeat; width: 26px; height: 16px; }
 .header__main { float: right; text-align: right; font-size: 0; white-space: nowrap; }
-.header__logo { float: right; font: 0/0 a; text-shadow: none; color: transparent; background: url("../img/svg/logo.svg") no-repeat 0 0; -moz-background-size: 152px 76px; -o-background-size: 152px 76px; -webkit-background-size: 152px 76px; background-size: 152px 76px; width: 152px; height: 76px; display: inline-block; }
+.header__logo { font: 0/0 a; text-shadow: none; color: transparent; background: url("../img/svg/logo.svg") no-repeat 0 0; -moz-background-size: 150px 76px; -o-background-size: 150px 76px; -webkit-background-size: 150px 76px; background-size: 150px 76px; width: 150px; height: 76px; display: inline-block; }
 
 .contact { position: relative; z-index: 2; display: inline-block; vertical-align: top; text-align: left; border-left: 1px solid #dce3e8; width: 245px; }
 .contact:hover .contact__list-main { visibility: visible; opacity: 1; top: 100%; }
@@ -121,8 +121,8 @@ a { text-decoration: none; }
 .nav__list li li a { padding: 0 22px 0 44px; }
 .nav__list a { display: block; position: relative; border-bottom: 1px solid #242424; border-left: 2px solid transparent; padding: 9px 32px 9px 22px; color: #cacaca; font-size: 14px; font-family: "opensans-semibold", Arial, sans-serif; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
 
-.ie8 .nav { left: -240px; }
-.ie8 .nav.is-active { left: 0; }
+.ie8 .nav, .opera .nav { left: -240px; }
+.ie8 .nav.is-active, .opera .nav.is-active { left: 0; }
 
 .breadcrumbs { position: relative; z-index: 4; margin: 0 0 20px; background: #e9e9e9; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.19); }
 .breadcrumbs .l-center:before { content: ""; position: absolute; left: -1970px; top: 0; bottom: 0; width: 2000px; background: #f4f4f4; }
@@ -484,7 +484,7 @@ a { text-decoration: none; }
 .posts-group .post:first-child { margin-left: 0; }
 @media only screen and (max-width: 1350px) { .posts-group .post:last-child { display: none; } }
 
-.post { margin-bottom: 20px; display: inline-block; border: 1px solid #ededed; padding: 18px 18px 40px; width: 300px; background: white; font-size: 16px; color: #191919; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; font-family: "opensans-regular", Arial, sans-serif; }
+.post { margin-bottom: 20px; display: inline-block; border: 1px solid #ededed; padding: 18px 18px 40px; width: 300px; background: white; font-size: 16px; color: #191919; -moz-transition: box-shadow 0.2s; -o-transition: box-shadow 0.2s; -webkit-transition: box-shadow 0.2s; transition: box-shadow 0.2s; font-family: "opensans-regular", Arial, sans-serif; }
 .post:hover { box-shadow: 0 2px 12px rgba(0, 0, 0, 0.14); }
 .post__img { margin: 0 0 23px; max-height: 174px; overflow: hidden; }
 .post__img img { max-width: 100%; }
@@ -623,7 +623,7 @@ a { text-decoration: none; }
 .project-head .slider { float: left; margin-right: 20px; width: 340px; }
 .project-head .table-wrap { overflow: hidden; }
 
-.slider { position: relative; overflow: hidden; padding-bottom: 14px; }
+.slider { position: relative; overflow: hidden; z-index: 1; padding-bottom: 14px; }
 .slider img { display: block; }
 .slider__pager { position: absolute; left: 0; right: 0; bottom: -5px; z-index: 5; }
 .slider__pager button { margin-right: 3px; vertical-align: middle; width: 6px; height: 6px; border-radius: 50%; background-color: lightgray; }
