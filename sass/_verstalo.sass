@@ -7,7 +7,7 @@
     bottom: 50px
     &_constr
         background: url(../images/constr.jpg) no-repeat 50% 50%
-        box-sizing: cover
+        background-size: cover 
     &_main
         .video
             position: absolute
@@ -60,6 +60,8 @@
             color: $black 
         a
             text-decoration: underline
+            &:hover
+                text-decoration: none
     &__serv
         position: relative
         float: left
@@ -213,11 +215,8 @@
             margin-left: 8px 
             +s(works-arr-top)
         &.is-active
-            background: #464646
-            span
-                color: #fff
             i
-                +sp(works-arr-down)
+                +rotate(180)
     &__list
         height: 150px
         font-size: 0
@@ -285,6 +284,8 @@
             top: 4px
             right: 0
             +s(arr-r-circle)
+        &:hover
+            text-decoration: none
 
 .back
     font-size: 0
@@ -305,7 +306,7 @@
 
 
 .dev
-    margin: 0 -10px
+    margin: 0 -10px 300px
     padding: 0 10px
     overflow: hidden
     &__in
@@ -338,7 +339,14 @@
         margin-bottom: 5px
         color: #6e6e6e
         line-height: 1.6  
+        font-size: 16px
+    &__footer
+        +clr
+        .btn
+            float: right
+            margin-left: 20px
     &__head-contacts
+        display: table
         font-size: 14px
         color: #5F5F5F 
         li
@@ -348,6 +356,8 @@
             color: $black 
         a
             text-decoration: underline
+            &:hover
+                text-decoration: none
     &__video, &__serv
         +tr(box-shadow .2s)
         &:hover
@@ -405,6 +415,9 @@
             font-size: 0
             color: $black 
             vertical-align: top
+            &:hover
+                span
+                    border: none
         span, i
             display: inline-block
             vertical-align: top
@@ -449,6 +462,9 @@
     &__video
         float: left
         font-size: 0
+        &:hover
+            span
+                border: none
         span, i
             display: inline-block
             vertical-align: middle
@@ -476,6 +492,8 @@
             color: $black 
         a
             text-decoration: underline
+            &:hover
+                text-decoration: none
     &__list-title
         margin-bottom: 7px
         +fsb
@@ -532,7 +550,7 @@
         vertical-align: top 
     &__date
         margin-bottom: 10px
-        font-size: 14px
+        font-size: 12px
         color: #9A9A9A
     &__link
         margin-bottom: 10px
@@ -591,14 +609,21 @@
         margin-bottom: 40px
         border: 1px solid #ededed
         background-color: #fff
-        &:after
+        &:after, &:before
             content: ""
             position: absolute
-            left: 0
-            right: 0
+        &:after 
+            left: -10px
+            right: -10px
             bottom: -20px
             height: 14px
             +background-image(radial-gradient(50% 50%, rgba(0,0,0,.2) rgba(0,0,0,0)))
+        &:before
+            left: 10px
+            right: 10px
+            bottom: -9px
+            height: 6px
+            +background-image(radial-gradient(50% 50%, rgba(0,0,0,.15) rgba(0,0,0,0)))
     &__video-pic
         position: relative
         margin-bottom: 7px
@@ -637,7 +662,7 @@
         line-height: 64px
         font-size: 37px 
     &__projects-text
-        max-width: 150px
+        max-width: 120px
         font-size: 14px
         color: #5F5F5F 
         line-height: 1.2
@@ -653,16 +678,16 @@
             content: ""
             position: absolute
         &:after 
-            left: 0
-            right: 0
+            left: -10px
+            right: -10px
             bottom: -20px
             height: 14px
             +background-image(radial-gradient(50% 50%, rgba(0,0,0,.2) rgba(0,0,0,0)))
         &:before
-            left: 20px
-            right: 20px
-            bottom: -11px
-            height: 10px
+            left: 10px
+            right: 10px
+            bottom: -9px
+            height: 6px
             +background-image(radial-gradient(50% 50%, rgba(0,0,0,.15) rgba(0,0,0,0)))
     &__projects-pic
         margin-bottom: 10px
@@ -719,6 +744,15 @@
             top: 28px
             bottom: 28px
             left: -17px
+    &__more
+        margin-bottom: 25px    
+        font-size: 14px
+        a
+            +fsb
+            text-decoration: underline
+            color: $black 
+            &:hover
+                text-decoration: none
     &__info 
         position: relative
         max-width: 450px
@@ -744,13 +778,8 @@
         font-size: 34px
         text-transform: uppercase
     &__text
-        margin-bottom: 25px 
         color: #6e6e6e
         font-size: 16px
-        a
-            +fsb
-            text-decoration: underline
-            color: $black 
     &__serv
         margin-bottom: 25px
     &__serv-title
@@ -780,6 +809,8 @@
             color: $black
             text-decoration: underline 
             font-size: 14px
+            &:hover
+                text-decoration: none
     &__contacts
         font-size: 14px
         color: #5F5F5F 
@@ -790,6 +821,8 @@
             color: $black 
         a
             text-decoration: underline
+            &:hover
+                text-decoration: none
 
 .rev
     position: relative
