@@ -441,6 +441,7 @@ a { text-decoration: none; }
 .engin__contacts a:hover { text-decoration: none; }
 
 .rev { position: relative; margin: 35px 0 40px 35px; background: white; }
+.rev__wrap { display: table; width: 100%; }
 .rev__ico { position: absolute; top: 50%; left: -40px; width: 66px; height: 66px; margin-top: -33px; background: #222222; border-radius: 50%; border: 7px solid whitesmoke; }
 .rev__ico:after { content: ""; position: absolute; top: 17px; left: 15px; background: url('../images/icons-s11df7ea18e.png') 0 -1722px no-repeat; width: 20px; height: 16px; }
 .rev__in, .rev__user { display: table-cell; vertical-align: top; }
