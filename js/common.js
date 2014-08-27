@@ -210,6 +210,5 @@ head.ready(function() {
 	if (article.length) {
 		article.find('table tr:nth-child(2n) td').css('background-color', '#e8e8e8');
 	};
-
  
 });
