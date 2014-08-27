@@ -205,15 +205,10 @@ head.ready(function() {
 	// 	slideCounter();	
 	// });
 	
-	// masonry
-	var masonry_trig = $('.js-masonry');
-	if (masonry_trig.length) {
-		masonry_block = masonry_trig.find('.js-item-masonry');
-		masonry_trig.masonry({
-			columnWidth: 220, 
-			gutter: 20, 
-			itemSelector: masonry_block
-		});
+	// article
+	var article = $('.js-article');
+	if (article.length) {
+		article.find('table tr:nth-child(2n) td').css('background-color', '#e8e8e8');
 	};
 
  

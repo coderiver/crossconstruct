@@ -494,7 +494,6 @@ a { text-decoration: none; }
 .article table { width: 100%; margin: 34px 0; color: #636363; font-size: 14px; }
 .article table caption { border-bottom: 2px solid #a02d31; padding: 0 0 11px; font-size: 18px; font-weight: normal; font-family: "opensans-semibold", Arial, sans-serif; color: #191919; text-align: left; }
 .article table thead th { border-top: 2px solid #a02d31; border-bottom: 2px solid #a02d31; padding: 5px 9px 10px; font-weight: normal; font-size: 16px; font-family: "opensans-semibold", Arial, sans-serif; color: #191919; text-align: left; }
-.article table tbody tr:nth-child(2n) td { background: #e8e8e8; }
 .article table tbody td { padding: 7px 9px; }
 .article .btn-wrap { margin: 30px 0; }
 .article .btn { color: white; text-decoration: none; }
