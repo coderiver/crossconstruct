@@ -248,17 +248,10 @@
 	bottom: 0
 	right: 0
 	+vertical
-	&__in
+	&__wrap
 		position: relative
 		display: inline-block
 		vertical-align: middle
-		padding: 17px 28px 
-		width: 417px
-		height: 214px
-		background: #fff
-		text-align: left
-		line-height: 1.1
-		white-space: nowrap
 		&:before
 			content: ""
 			position: absolute
@@ -268,7 +261,14 @@
 			width: 645px
 			height: 330px
 			background: url(../images/shadow.png) 0 0 no-repeat 
-			 
+	&__in
+		padding: 17px 28px 
+		width: 417px
+		height: 214px
+		background: #fff
+		text-align: left
+		line-height: 1.1
+		white-space: nowrap	 
 	&__number
 		display: inline-block
 		vertical-align: middle
