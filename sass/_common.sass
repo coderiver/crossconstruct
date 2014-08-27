@@ -200,13 +200,12 @@ a
 			top: 100%
 	&__item
 		position: relative
-		padding: 20px 43px 20px 10px
+		padding: 20px 30px 20px 10px
 		background: #fff 
 		font-size: 14px
 		color: $dark 
 		+tr
 		cursor: pointer
-		white-space: nowrap
 		&:hover
 			background: #f9f9f9 
 			.contact__list
@@ -229,7 +228,7 @@ a
 					+s(arr-r-red) 
 	&__first-item
 		height: 76px
-		padding: 18px 43px 18px 10px
+		padding: 18px 30px 18px 10px
 		&:after
 			content: ""
 			position: absolute
@@ -242,6 +241,7 @@ a
 				+s(arr-b-red) 
 	&__info
 		display: inline-block
+		max-width: 190px
 		vertical-align: top
 		white-space: normal
 		span
@@ -285,6 +285,7 @@ a
 		color: $black
 		border-radius: 8px
 		background: #ededed 
+		white-space: normal
 		+tr
 		&:hover
 			background: $red

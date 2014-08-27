@@ -77,23 +77,23 @@ a { text-decoration: none; }
 
 .contact { position: relative; z-index: 2; display: inline-block; vertical-align: top; text-align: left; border-left: 1px solid #dce3e8; width: 245px; }
 .contact:hover .contact__list-main { visibility: visible; opacity: 1; top: 100%; }
-.contact__item { position: relative; padding: 20px 43px 20px 10px; background: white; font-size: 14px; color: #303030; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; cursor: pointer; white-space: nowrap; }
+.contact__item { position: relative; padding: 20px 30px 20px 10px; background: white; font-size: 14px; color: #303030; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; cursor: pointer; }
 .contact__item:hover { background: #f9f9f9; }
 .contact__item:hover .contact__list { visibility: visible; opacity: 1; z-index: 1; }
 .contact__item i { margin: 4px 4px 0 0; vertical-align: top; }
 .contact__item.has-droplist:after { content: ""; position: absolute; top: 50%; right: 14px; margin-top: -5px; background: url('../images/icons-s11df7ea18e.png') 0 -278px no-repeat; width: 7px; height: 11px; }
 .contact__item.has-droplist:hover:after { background: url('../images/icons-s11df7ea18e.png') 0 -257px no-repeat; width: 7px; height: 11px; }
-.contact__first-item { height: 76px; padding: 18px 43px 18px 10px; }
+.contact__first-item { height: 76px; padding: 18px 30px 18px 10px; }
 .contact__first-item:after { content: ""; position: absolute; top: 50%; right: 14px; margin-top: -3px; background: url('../images/icons-s11df7ea18e.png') 0 -184px no-repeat; width: 11px; height: 7px; }
 .contact__first-item:hover:after { background: url('../images/icons-s11df7ea18e.png') 0 -167px no-repeat; width: 11px; height: 7px; }
-.contact__info { display: inline-block; vertical-align: top; white-space: normal; }
+.contact__info { display: inline-block; max-width: 190px; vertical-align: top; white-space: normal; }
 .contact__info span { display: block; font-family: "opensans-semibold", Arial, sans-serif; font-size: 18px; color: #303030; }
 .contact__list { visibility: hidden; opacity: 0; position: absolute; top: -50%; left: 0; right: 0; z-index: -1; border-top: 2px solid #191919; background: white; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; box-shadow: 0 25px 27px rgba(0, 0, 0, 0.17); }
 .contact__list .contact__item { border-bottom: 1px solid #bcbcbc; }
 .contact__list .contact__item:hover .contact__list { left: 100%; z-index: 2; }
 .contact__list .contact__list { right: auto; top: 0; left: 80%; width: 245px; color: #6b6b6b; border: 0; z-index: -1; }
 .contact__list .contact__list .contact__item { padding: 18px 43px 17px 27px; }
-.contact__link { display: inline-block; padding: 1px 6px; font-size: 11px; text-transform: uppercase; color: #191919; border-radius: 8px; background: #ededed; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
+.contact__link { display: inline-block; padding: 1px 6px; font-size: 11px; text-transform: uppercase; color: #191919; border-radius: 8px; background: #ededed; white-space: normal; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
 .contact__link:hover { background: #a02d31; color: white; }
 
 .icon-pin { display: inline-block; background: url('../images/icons-s11df7ea18e.png') 0 -1439px no-repeat; width: 13px; height: 21px; }
