@@ -133,8 +133,8 @@ head.ready(function() {
         		$(this).parents(".js-accord-wrap").find(".js-accord").removeClass("is-active").find(".js-accord-body").slideUp("fast");
         	}
         	else {
-        			$(this).parents(".js-accord-wrap").find(".js-accord").removeClass("is-active").find(".js-accord-body").slideUp("fast");
-        		    $(this).parents(".js-accord").toggleClass("is-active").find(".js-accord-body").slideToggle("fast");
+        		$(this).parents(".js-accord-wrap").find(".js-accord").removeClass("is-active").find(".js-accord-body").slideUp("fast");
+        		$(this).parents(".js-accord").toggleClass("is-active").find(".js-accord-body").slideToggle("fast");
         	}
         	
         });

@@ -342,8 +342,8 @@ a { text-decoration: none; }
 .service__footer .btn { float: right; }
 .service__video { float: left; font-size: 0; }
 .service__video:hover span { border: none; }
-.service__video span, .service__video i { display: inline-block; vertical-align: middle; }
-.service__video span { border-bottom: 1px dotted; color: #191919; font-family: "opensans-semibold", Arial, sans-serif; font-size: 14px; }
+.service__video span, .service__video i { float: left; }
+.service__video span { padding-top: 2px; border-bottom: 1px dotted; color: #191919; font-family: "opensans-semibold", Arial, sans-serif; font-size: 14px; }
 .service__video i { margin-left: 8px; background: url('../images/icons-s11df7ea18e.png') 0 -1947px no-repeat; width: 34px; height: 24px; }
 .service__list { padding: 20px 20px 20px 30px; }
 .service__contacts { margin-bottom: 5px; *zoom: 1; }
@@ -706,10 +706,10 @@ a { text-decoration: none; }
 
 .accord { border-top: 1px solid #d7d7d7; padding: 11px 0; }
 .accord.is-active .accord__title { font-size: 13px; font-family: "opensans-semibold", Arial, sans-serif; }
-.accord.is-active .accord__title:after { background: url('../images/icons-s11df7ea18e.png') 0 -333px no-repeat; width: 11px; height: 7px; }
+.accord.is-active .accord__title > i { background-position: 0 -333px; }
 .accord.is-active .progress__line { height: 19px; background-image: url(../images/progress-big.png); }
 .accord__title { position: relative; text-transform: uppercase; padding-right: 30px; font-size: 11px; cursor: pointer; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
-.accord__title:after { content: ""; position: absolute; top: 50%; right: 10px; margin-top: -3px; background: url('../images/icons-s11df7ea18e.png') 0 -184px no-repeat; width: 11px; height: 7px; }
+.accord__title > i { content: ""; position: absolute; top: 50%; right: 10px; margin-top: -3px; background: url('../images/icons-s11df7ea18e.png') 0 -184px no-repeat; width: 11px; height: 7px; }
 .accord__body { display: none; padding: 14px 0 5px; font-size: 13px; color: #959595; }
 .accord__body a { color: #959595; }
 .accord .progress { margin-top: 7px; }
