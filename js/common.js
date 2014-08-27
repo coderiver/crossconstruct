@@ -204,6 +204,17 @@ head.ready(function() {
 	// $(window).resize(function(){
 	// 	slideCounter();	
 	// });
+	
+	// masonry
+	var masonry_trig = $('.js-masonry');
+	if (masonry_trig.length) {
+		masonry_block = masonry_trig.find('.js-item-masonry');
+		masonry_trig.masonry({
+			columnWidth: 220, 
+			gutter: 20, 
+			itemSelector: masonry_block
+		});
+	};
 
  
 });
