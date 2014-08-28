@@ -41,7 +41,6 @@
         position: absolute
         top: -8px
         left: 0
-        +s(constr-ico)
     &__info-title
         margin-bottom: 15px
         +fsb
@@ -331,7 +330,6 @@
         position: absolute
         top: -8px
         left: 0
-        +s(dev-ico)
     &__head-title
         margin-bottom: 15px
         +fsb
@@ -394,22 +392,13 @@
         color: $black
         &:hover
             box-shadow: 3px 4px 5px rgba(0,0,0,.1)
-            .dev__serv-ico-1
-                +sp(dev-serv1-h)
-            .dev__serv-ico-2
-                +sp(dev-serv2-h)
-            .dev__serv-ico-3
-                +sp(dev-serv3-h)
-        i
+            img
+                +gray-zero
+        img
             position: absolute
             right: 10px
             bottom: 5px
-    &__serv-ico-1
-        +s(dev-serv1)
-    &__serv-ico-2
-        +s(dev-serv2)
-    &__serv-ico-3
-        +s(dev-serv3)
+            +gray
     &__all
         a
             display: inline-block
@@ -446,7 +435,6 @@
         position: absolute
         top: 25px
         left: 35px
-        +s(dev-ico)
     &__title
         padding: 16px 0 20px 90px 
         margin-bottom: 15px
@@ -769,10 +757,9 @@
             height: 14px
             +background-image(radial-gradient(50% 50%, rgba(0,0,0,.2) rgba(0,0,0,0)))
     &__ico
-        display: block
-        margin: 0 auto 10px
-        vertical-align: top
-        +s(engin-ico)
+        margin-bottom: 10px
+        text-align: center
+        font-size: 0
     &__title
         margin-bottom: 10px
         +fsb
