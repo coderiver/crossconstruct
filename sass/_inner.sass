@@ -691,11 +691,24 @@
 	padding-bottom: 20px
 	img
 		display: block
+		width: 100%
+	span
+		position: absolute
+		top: 20px
+		left: 20px
+		padding: 7px 15px
+		background: #7b8188
+		bottom: rgba(0,0,0,.4)   
+		font-size: 21px
+		color: #fff 
+	div
+		width: 100%
 	&__pager
 		position: absolute
 		left: 0
 		right: 0
 		bottom: 0
+		font-size: 0
 		z-index: 5
 		button
 			margin-right: 3px
@@ -704,6 +717,7 @@
 			height: 10px
 			border-radius: 50%
 			background-color: #d3d3d3
+			vertical-align: top
 			&.is-active
 				background: $black 
 				

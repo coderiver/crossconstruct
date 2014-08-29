@@ -654,9 +654,11 @@ a { text-decoration: none; }
 .project-head .table-wrap { overflow: hidden; }
 
 .slider { position: relative; overflow: hidden; z-index: 1; padding-bottom: 20px; }
-.slider img { display: block; }
-.slider__pager { position: absolute; left: 0; right: 0; bottom: 0; z-index: 5; }
-.slider__pager button { margin-right: 3px; vertical-align: middle; width: 10px; height: 10px; border-radius: 50%; background-color: lightgray; }
+.slider img { display: block; width: 100%; }
+.slider span { position: absolute; top: 20px; left: 20px; padding: 7px 15px; background: #7b8188; bottom: rgba(0, 0, 0, 0.4); font-size: 21px; color: white; }
+.slider div { width: 100%; }
+.slider__pager { position: absolute; left: 0; right: 0; bottom: 0; font-size: 0; z-index: 5; }
+.slider__pager button { margin-right: 3px; vertical-align: middle; width: 10px; height: 10px; border-radius: 50%; background-color: lightgray; vertical-align: top; }
 .slider__pager button.is-active { background: #191919; }
 
 .projects-slider { position: relative; margin-bottom: 30px; padding-top: 60px; }
@@ -672,6 +674,7 @@ a { text-decoration: none; }
 .sidebar { margin: 0 0 48px; box-shadow: 0 0 0 1px #ededed; border-top: 5px solid #191919; background: white; }
 .sidebar + .banner { margin-top: -20px; }
 .sidebar_nav .sidebar__item { padding: 0; }
+.sidebar__nav_border { border-top: 1px solid #d7d7d7; }
 .sidebar_only-nav { margin-bottom: -33px; }
 .sidebar__in { padding: 0 18px; }
 .sidebar__in .sidebar__title { padding: 18px 0; }
